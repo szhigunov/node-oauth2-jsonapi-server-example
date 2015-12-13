@@ -1,16 +1,21 @@
 const server = require('../src/hello-server');
+
 const fetch = require('node-fetch');
+const co = require('co');
 const assert = require('chai').assert;
 const port = 4000;
 
+//Test should be stupid
+//
 describe('hello world', () => {
-	before(done => server.listen(port,done)); // start server ( prershoulequisites);
+	before(done => server.listen(port,done)); // start server ( prerequisites);
 	after(() => server.close());
 
-	it('should respond', done => {
-		fetch('http://localhost:'+ port+ '/').then(response => {
-			assert(response.ok);  // expect server to be ok response (200) 
-			done();
-		})
-	})
+	it('should respond', co.wrap( function* () {
+		var response = yield fetch('http://localhost:'+ port+ '/');
+		assert(response.ok, 'hello world response');
+		var text = yield response.text();
+		assert(text === 'Hello World', 'Hello World string');
+	}));
+
 });
