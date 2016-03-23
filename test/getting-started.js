@@ -1,4 +1,4 @@
-const server = require('../src/hello-server');
+const server = require('../src/server/hello-server');
 
 const fetch = require('node-fetch');
 const co = require('co');
@@ -6,7 +6,6 @@ const assert = require('chai').assert;
 const port = 4000;
 
 //Test should be stupid
-//
 describe('hello world', () => {
 	before(done => server.listen(port,done)); // start server ( prerequisites);
 	after(() => server.close());

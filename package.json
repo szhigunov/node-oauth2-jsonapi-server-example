@@ -1,0 +1,35 @@
+{
+  "name": "node-api-design-workshop-2015-12-13",
+  "version": "1.0.0",
+  "description": "API design with Node.js Workshop - Kyiv, December 13, 2015",
+  "main": "index.js",
+  "scripts": {
+    "cover": "istanbul cover _mocha",
+    "test": "mocha test --recursive --reporter=min",
+    "test:watch": "mocha test --watch --recursive --reporter=min --growl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/listochkin/node-api-design-workshop-2015-12-13.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/listochkin/node-api-design-workshop-2015-12-13/issues"
+  },
+  "homepage": "https://github.com/listochkin/node-api-design-workshop-2015-12-13#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "co": "^4.6.0",
+    "eslint-config-airbnb": "^2.0.0",
+    "express": "^4.13.3",
+    "istanbul": "^0.4.1",
+    "jasmine": "^2.4.1",
+    "jsonapi-server": "^1.0.2",
+    "mocha": "^2.3.4",
+    "node-fetch": "^1.3.3",
+    "node-oauth2-server": "^2.4.0",
+    "oauth2-server": "^2.4.1",
+    "proxy-middleware": "^0.15.0"
+  }
+}
