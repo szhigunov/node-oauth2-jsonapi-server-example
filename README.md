@@ -1,2 +1,4 @@
-# node-api-design-workshop-2015-12-13
-API design with Node.js Workshop - Kyiv, December 13, 2015
+# node-oauth2-jsonapi-server-example
+
+Using oauth2-server, jsonapi-server, express. 
+Test coverage using chai, mocha, express
